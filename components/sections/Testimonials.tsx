@@ -52,7 +52,7 @@ export function Testimonials({ id }: { id?: string }) {
   return (
     <section
       id={id}
-      className="relative overflow-hidden px-6 sm:px-8 lg:px-12 py-20 lg:py-[120px]"
+      className="relative overflow-hidden px-6 sm:px-8 lg:px-12 py-20 lg:py-[80px]"
       style={{ background: "var(--tm-green-light)" }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
@@ -60,11 +60,11 @@ export function Testimonials({ id }: { id?: string }) {
       <div
         className="marble-bg marble-veins absolute rounded-full pointer-events-none"
         style={{
-          top: -120,
+          top: -80,
           left: "50%",
           marginLeft: -180,
-          width: 360,
-          height: 360,
+          width: 240,
+          height: 240,
           opacity: 0.08,
           filter: "blur(20px)",
         }}

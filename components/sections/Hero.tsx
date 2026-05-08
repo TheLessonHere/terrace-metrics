@@ -138,9 +138,18 @@ export function Hero() {
             A science-backed system that helps you understand, build, and track
             resilience at every stage of life.
           </p>
-          <div className="hero-cta flex flex-wrap gap-3 mt-8">
-            <button className="btn-light">Start Your Assessment</button>
-            <button className="btn-ghost-light">See How It Works</button>
+          <div className="hero-cta flex flex-wrap items-center gap-3 mt-8">
+            <button className="btn-light">Start Your Resilience Journey</button>
+            <span
+              className="font-serif italic text-[16px] inline-flex items-center justify-center mt-8"
+              style={{
+                color: "rgba(255,255,255,0.55)",
+                width: 16,
+              }}
+            >
+              or
+            </span>
+            <button className="btn-ghost-light">Take Our Sample Assessment</button>
           </div>
           <div className="flex flex-wrap gap-2.5 mt-9">
             {["5M+ individuals served", "Research-validated", "Global reach"].map(

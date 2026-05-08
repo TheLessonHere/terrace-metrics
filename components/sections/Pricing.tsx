@@ -39,7 +39,7 @@ const PLANS: Plan[] = [
       "Monthly insights & reports",
     ],
     featured: false,
-    shaftMinHeight: 600,
+    shaftMinHeight: 630,
   },
   {
     name: "Family",
@@ -62,33 +62,9 @@ export function Pricing({ id }: { id?: string }) {
   return (
     <section
       id={id}
-      className="relative overflow-hidden px-6 sm:px-8 lg:px-12 py-20 lg:py-[120px]"
+      className="relative overflow-hidden px-6 sm:px-8 lg:px-12 py-20 lg:py-[72px]"
       style={{ background: "var(--tm-bg)" }}
     >
-      {/* Marble accents */}
-      <div
-        className="marble-bg marble-veins absolute rounded-full pointer-events-none hidden lg:block"
-        style={{
-          left: -180,
-          top: 80,
-          width: 360,
-          height: 360,
-          opacity: 0.09,
-          filter: "blur(8px)",
-        }}
-      />
-      <div
-        className="marble-bg absolute rounded-full pointer-events-none hidden lg:block"
-        style={{
-          right: -140,
-          bottom: 40,
-          width: 280,
-          height: 280,
-          opacity: 0.08,
-          filter: "blur(6px)",
-        }}
-      />
-
       <div className="relative mx-auto max-w-[1152px] text-center">
         <div data-reveal className="tm-eyebrow mb-3.5">
           PRICING · PLANS
@@ -107,15 +83,48 @@ export function Pricing({ id }: { id?: string }) {
         <div
           data-reveal
           data-reveal-stagger
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1.05fr] gap-6 lg:gap-[22px] items-end mt-16 lg:mt-20"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1.05fr] gap-6 lg:gap-[22px] items-end mt-16 lg:mt-10"
         >
           {PLANS.map((p) => (
             <PricingColumn key={p.name} plan={p} />
           ))}
         </div>
 
+        <div className="mt-12 lg:mt-10 flex justify-center">
+          <a
+            href="#"
+            className="group inline-flex items-baseline gap-2 text-[15px] text-[#1a1f1c] transition-colors"
+          >
+            <span style={{ color: "rgba(26,31,28,0.7)" }}>
+              Not sure yet?
+            </span>
+            <span
+              className="relative"
+              style={{ color: "var(--tm-green)" }}
+            >
+              Try our sample assessment
+              <span
+                aria-hidden="true"
+                className="absolute left-0 right-0"
+                style={{
+                  bottom: -2,
+                  height: 1,
+                  background: "rgba(74,124,89,0.35)",
+                }}
+              />
+            </span>
+            <span
+              aria-hidden="true"
+              className="transition-transform group-hover:translate-x-0.5"
+              style={{ color: "var(--tm-green)" }}
+            >
+              →
+            </span>
+          </a>
+        </div>
+
         <div
-          className="text-[14px] mt-12 lg:mt-14"
+          className="text-[14px] mt-6 lg:mt-5"
           style={{ color: "rgba(26,31,28,0.6)" }}
         >
           No subscription traps · Cancel anytime · Your data is private
@@ -137,8 +146,8 @@ function PricingColumn({ plan: p }: { plan: Plan }) {
           right: -10,
           height: 36,
           background: p.featured ? "var(--tm-green)" : "#fff",
-          border: p.featured ? "none" : "0.5px solid rgba(0,0,0,0.06)",
-          borderRadius: "6px 6px 16px 16px",
+          border: p.featured ? "none" : "0.5px solid rgba(0,0,0,0.1)",
+          borderRadius: "4px 4px 16px 16px",
           boxShadow: p.featured
             ? "0 8px 24px rgba(74,124,89,0.30)"
             : "0 2px 8px rgba(0,0,0,0.04)",
@@ -160,7 +169,7 @@ function PricingColumn({ plan: p }: { plan: Plan }) {
           border: p.featured
             ? "1px solid rgba(74,124,89,0.35)"
             : "0.5px solid rgba(0,0,0,0.08)",
-          borderRadius: "10px 10px 18px 18px",
+          borderRadius: "8px",
           padding: "44px 32px 36px",
           boxShadow: p.featured ? "0 12px 40px rgba(74,124,89,0.12)" : "none",
           minHeight: p.shaftMinHeight,
@@ -245,11 +254,11 @@ function PricingColumn({ plan: p }: { plan: Plan }) {
             left: -10,
             right: -10,
             bottom: -10,
-            height: 12,
+            height: 16,
             background: p.featured ? "var(--tm-green-dark)" : "#fff",
-            border: p.featured ? "none" : "0.5px solid rgba(0,0,0,0.06)",
+            border: p.featured ? "none" : "0.5px solid rgba(0,0,0,0.1)",
             borderRadius: "16px 16px 4px 4px",
-            zIndex: -1,
+            zIndex: 1,
           }}
         />
       </div>
