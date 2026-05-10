@@ -209,7 +209,7 @@ export function PersonalizedResults({ selectedGoals, onBack }: Props) {
 
         <div className="text-center">
           <button
-            onClick={() => router.push("/assessment")}
+            onClick={() => router.push("/#pricing")}
             className="btn-primary"
             style={{ padding: "16px 44px", fontSize: 16 }}
           >
@@ -316,7 +316,7 @@ function IndicatorBrowser({
             }
           >
             <Icon name={showAll ? "chevronUp" : "chevronDown"} size={14} />
-            {showAll ? "Show only mine" : "View all 14 indicators"}
+            {showAll ? "All Indicators" : "My Indicators"}
           </button>
         )}
       </div>

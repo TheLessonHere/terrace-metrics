@@ -6,12 +6,12 @@ import { Icon, type IconName } from "@/components/ui/Icon";
 
 const GOALS: { id: string; icon: IconName; t: string; d: string }[] = [
   { id: "me", icon: "user", t: "Just me", d: "Personal growth" },
-  { id: "child", icon: "smile", t: "My child", d: "Ages 8–17" },
+  { id: "child", icon: "parentChild", t: "My child", d: "Ages 8–17" },
   { id: "family", icon: "users", t: "My family", d: "All ages" },
 ];
 
 const PLANS: { id: string; icon: IconName; n: string; d: string; p: string }[] = [
-  { id: "child", icon: "smile", n: "Child", d: "Age-appropriate assessment", p: "$1/mo" },
+  { id: "child", icon: "parentChild", n: "Child", d: "Age-appropriate assessment", p: "$1/mo" },
   { id: "adult", icon: "user", n: "Adult", d: "Individual assessment and insights", p: "$2/mo" },
   { id: "family", icon: "users", n: "Family", d: "Up to 5 family members", p: "$3/mo" },
 ];
@@ -356,6 +356,8 @@ function Step4() {
 }
 
 export function BigCTA() {
+  const goPricing = () =>
+    document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
   return (
     <section className="marble-bg marble-veins relative overflow-hidden px-6 sm:px-8 lg:px-12 py-24 lg:py-[120px] text-center">
       <div
@@ -402,6 +404,7 @@ export function BigCTA() {
         <button
           className="btn-light"
           style={{ marginTop: 40, padding: "16px 36px", fontSize: 16 }}
+          onClick={goPricing}
         >
           Start Your Assessment
         </button>

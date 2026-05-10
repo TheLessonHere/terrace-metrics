@@ -58,6 +58,9 @@ export function Hero() {
     { scope: root }
   );
 
+  const goPricing = () =>
+    document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
+
   return (
     <section
       id="top"
@@ -139,7 +142,7 @@ export function Hero() {
             resilience at every stage of life.
           </p>
           <div className="hero-cta flex flex-wrap items-center gap-3 mt-8">
-            <button className="btn-light">Start Your Resilience Journey</button>
+            <button className="btn-light" onClick={goPricing}>Start Your Resilience Journey</button>
             <span
               className="font-serif italic text-[16px] inline-flex items-center justify-center mt-8"
               style={{
