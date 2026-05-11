@@ -152,7 +152,7 @@ export function Hero() {
             >
               or
             </span>
-            <button className="btn-ghost-light">Take Our Sample Assessment</button>
+            <button className="btn-ghost-light btn-attention-pulse">Take Our Sample Assessment</button>
           </div>
           <div className="flex flex-wrap gap-2.5 mt-9">
             {["5M+ individuals served", "Research-validated", "Global reach"].map(

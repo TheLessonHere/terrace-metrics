@@ -37,6 +37,7 @@ const PLANS: Plan[] = [
       "Access to evidence-based tools",
       "Progress tracking dashboard",
       "Monthly insights & reports",
+      "Guided resilience exercises and workshops",
     ],
     featured: false,
     shaftMinHeight: 630,

@@ -6,12 +6,12 @@ import { Icon, type IconName } from "@/components/ui/Icon";
 
 const GOALS: { id: string; icon: IconName; t: string; d: string }[] = [
   { id: "me", icon: "user", t: "Just me", d: "Personal growth" },
-  { id: "child", icon: "parentChild", t: "My child", d: "Ages 8–17" },
+  { id: "child", icon: "baby", t: "My child", d: "Ages 8–17" },
   { id: "family", icon: "users", t: "My family", d: "All ages" },
 ];
 
 const PLANS: { id: string; icon: IconName; n: string; d: string; p: string }[] = [
-  { id: "child", icon: "parentChild", n: "Child", d: "Age-appropriate assessment", p: "$1/mo" },
+  { id: "child", icon: "baby", n: "Child", d: "Age-appropriate assessment", p: "$1/mo" },
   { id: "adult", icon: "user", n: "Adult", d: "Individual assessment and insights", p: "$2/mo" },
   { id: "family", icon: "users", n: "Family", d: "Up to 5 family members", p: "$3/mo" },
 ];

@@ -173,6 +173,37 @@ html, body {
   transform: translateY(-1px);
 }
 
+/* Attention pulse — used once on hero load to draw the eye */
+.btn-attention-pulse {
+  animation: hero-cta-pulse 1.8s ease-out 1.2s 3 both;
+}
+.btn-attention-pulse:hover {
+  animation: none;
+}
+@keyframes hero-cta-pulse {
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(168,212,180,0.55),
+      0 0 14px 2px rgba(168,212,180,0.35);
+    border-color: rgba(168,212,180,0.9);
+  }
+  70% {
+    box-shadow:
+      0 0 0 14px rgba(168,212,180,0),
+      0 0 14px 2px rgba(168,212,180,0);
+    border-color: rgba(255,255,255,0.4);
+  }
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(168,212,180,0),
+      0 0 0 0 rgba(168,212,180,0);
+    border-color: rgba(255,255,255,0.4);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn-attention-pulse { animation: none; }
+}
+
 .btn-light {
   background: #fff;
   color: var(--tm-ink);
